@@ -15,7 +15,6 @@ if video_url:
     try:
         # Crear objeto YouTube
         yt = YouTube(video_url, use_po_token=True)
-        yt = YouTube(video_url)
         st.write(f"Título del video: {yt.title}")
 
         # Si el formato es MP4, mostrar las opciones de calidad disponibles
