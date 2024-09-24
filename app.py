@@ -14,6 +14,7 @@ formato = st.selectbox("Selecciona el formato de descarga:", ["MP4 (Video)", "MP
 if video_url:
     try:
         # Crear objeto YouTube
+        yt = YouTube(video_url, use_po_token=True)
         yt = YouTube(video_url)
         st.write(f"Título del video: {yt.title}")
 
